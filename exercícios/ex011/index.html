@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <!-- aqui podemos entender que quando a largura da tela chega em 750px, ela muda para a próxima que esta nao outra linha-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!-- aqui quando ela chega em 1050 px de largura, passa para a próxima imagem, que é a apadrão-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+        <!-- nesta linha,inserimos uma imagem normal como padrão-->
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/neverplay-Jeremy Blake.mp3" type="audio/mpeg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.
+            <!-- nesse caso ele só ira executar essa linha se o navegador nao for compatível com MP3-->
+            <a href="midia/neverplay-Jeremy Blake.mp3">Clique aqui para baixar o arquivo MP3</a>
+        </p>
+    </audio>
+</body>
+</html>
